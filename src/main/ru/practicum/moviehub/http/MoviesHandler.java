@@ -17,10 +17,9 @@ public class MoviesHandler extends BaseHttpHandler {
     public void handle(HttpExchange ex) throws IOException {
         String method = ex.getRequestMethod();
         if ("GET".equalsIgnoreCase(method)) {
-            // Пока возвращаем пустой массив (далее будет использоваться store)
             sendJson(ex, 200, "[]");
         } else {
-            ex.sendResponseHeaders(405, -1); // Method Not Allowed
+            ex.sendResponseHeaders(405, -1);
         }
     }
 }

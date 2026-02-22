@@ -30,7 +30,7 @@ public class MoviesApiTest {
 
     @BeforeEach
     void beforeEach() {
-        store.clear(); // изолируем тесты
+        store.clear();
     }
 
     @AfterAll
